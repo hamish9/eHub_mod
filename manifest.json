@@ -1,0 +1,43 @@
+{
+    "manifest_version": 2,
+    "name": "eHub Modernizer",
+    "description": "This extension reformats the admin pages of NavigantVitalStats.com",
+    "version": "1.0",
+    "permissions": [
+        "*://*.navigantvitalstats.com/*",
+        "notifications"        
+    ],
+    "browser_action": {
+        "default_icon": "images/e.png",
+        "default_title": "eHub"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "web_accessible_resources": [
+        "images/clipboard.png",
+        "images/e.png",
+        "images/16.png",
+        "images/48.png",
+        "images/64.png",
+        "images/128.png",
+        "images/icon_thumbsup.gif",
+        "images/red_x.png",
+        "images/Black_Remove.png",
+        "images/White_Remove.png",
+        "images/redflag.gif",
+        "jquery-1.10.2.min.map"
+    ],
+    "content_scripts": [{
+            "js": [
+                "jquery-1.10.2.min.js",
+                "underscore-min.js",
+                "dump.js",
+                "gridview.js"
+            ],
+            "css": ["custom.css"],
+            "matches": ["http://navigantvitalstats.com/*", "https://navigantvitalstats.com/*"],
+            "run_at": "document_end"
+        }]
+}
