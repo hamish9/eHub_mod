@@ -1,4 +1,4 @@
 eHub_mod
 ========
 
-Chrome extension that reformats the admin pages of NavigantVitalStats.com
+Chrome extension that reformats the admin pages of company dashboard
